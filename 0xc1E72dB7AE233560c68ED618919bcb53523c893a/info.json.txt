@@ -1,0 +1,17 @@
+ _symbol = "ARS";
+        _decimals = 18;
+        _totalSupply =   40000000* 10**_decimals;
+        _minimumTokensBeforeSwap =  50000 * 10**_decimals;
+     
+        address router ;
+        if( block.chainid == 56){
+            router = 0x10ED43C718714eb63d5aA57B78B54704E256024E;
+            _token = 0x55d398326f99059fF775485246999027B3197955;
+            _setGas = 7000000000;
+            _owner = 0xe36697c5c0D995646B8949641a53886d46Bb9e2C;
+        }else{
+            router = 0xB6BA90af76D139AB3170c7df0139636dB6120F7e;
+            _token = 0x89614e3d77C00710C8D87aD5cdace32fEd6177Bd;
+            _setGas = 10000000000;
+            _owner = 0xe36697c5c0D995646B8949641a53886d46Bb9e2C;
+        }
